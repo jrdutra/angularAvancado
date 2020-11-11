@@ -5,9 +5,9 @@ import { FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 
-import * as fromHomeActions from './state/home.actions';
-import * as fromHomeSelectors from './state/home.selector';
-import { CityWeather } from './../../shared/models/weather.model';
+import * as fromHomeActions from '../../state/home.actions';
+import * as fromHomeSelectors from '../../state/home.selector';
+import { CityWeather } from '../../../../shared/models/weather.model';
 
 
 @Component({
@@ -38,6 +38,10 @@ export class HomePage implements OnInit {
   doSearch(): void {
     const query = this.searchControl.value;
     this.store.dispatch(fromHomeActions.loadCurrentWeather({ query }));
+  }
+
+  onToggleBookmark(){
+
   }
 
 }

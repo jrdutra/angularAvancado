@@ -10,11 +10,11 @@ export const selectCurrentWeather = createSelector(
 
 export const selectCurrentWeatherLoading = createSelector(
   selectHomeState,
-  (homeState: HomeState) => homeState.entity,
+  (homeState: HomeState) => homeState.loading,
 );
 
 export const selectCurrentWeatherError = createSelector(
   selectHomeState,
-  (homeState: HomeState) => homeState.entity,
+  (homeState: HomeState) => homeState.error,
 );
 
