@@ -19,8 +19,8 @@ export class HomePage implements OnInit {
 
   ngOnInit(): void {
     this.searchControl = new FormControl('', Validators.required);
-    this.store.pipe(select(fromHomeSelectors.selectHomeText))
-          .subscribe(text => this.text = text);
+    // this.store.pipe(select(fromHomeSelectors.selectHomeText))
+    //       .subscribe(text => this.text = text);
   }
 
   doSearch(): void {
